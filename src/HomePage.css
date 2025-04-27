@@ -1,0 +1,114 @@
+/* --- HomePage.css --- */
+/* 全局字体和基础背景 */
+@font-face {
+  font-family: 'Alibaba PuHuiTi';
+  src: url('https://static-aliyun-doc.oss-accelerate.aliyuncs.com/AlibabaPuHuiTi-2.0/AlibabaPuHuiTi-Regular.ttf') format('truetype');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0d0d0d;
+  font-family: 'Poppins', 'Alibaba PuHuiTi', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: #cdc1c1;
+  overflow-y: auto;
+}
+
+/* 首页容器 */
+.homepage-container {
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #302b63);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* 渐变动画 */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 首页卡片 */
+.homepage-card {
+  background: rgba(25, 25, 25, 0.9);
+  border: 1px solid #444;
+  border-radius: 15px;
+  box-shadow: 0 0 25px 8px rgba(168, 85, 247, 0.5);
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* LOGO+标题 */
+.homepage-logo-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.homepage-logo {
+  font-size: 2.5rem;
+  animation: glow 2s infinite alternate, float 4s ease-in-out infinite;
+}
+
+/* 浮动动画 */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.homepage-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d9b3ff;
+  text-shadow: 0 0 10px #a855f7;
+}
+
+.homepage-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* 渐隐动画 */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* 首页按钮 */
+.homepage-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homepage-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #a855f7, 0 0 30px #6366f1;
+}
+
+.homepage-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px #a855f7;
+}

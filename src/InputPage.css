@@ -1,0 +1,361 @@
+/* --- InputPage.css --- */
+
+/* 拖拽上传区域 */
+.inputpage-upload-area {
+  background: #111;
+  border: 2px dashed #333;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.inputpage-upload-area.active {
+  background: #222;
+  border-color: #007aff;
+}
+
+.inputpage-upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inputpage-preview-wrapper {
+  position: relative;
+}
+
+.inputpage-preview {
+  margin-top: 1rem;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #666;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inputpage-remove-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 输入框与选择框 */
+.inputpage-section {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea, select {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #666;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f0f0f0;
+  outline: none;
+}
+
+/* select option样式 */
+select {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #f0f0f0;
+}
+
+select option {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+
+@font-face {
+  font-family: 'Alibaba PuHuiTi';
+  src: url('https://static-aliyun-doc.oss-accelerate.aliyuncs.com/AlibabaPuHuiTi-2.0/AlibabaPuHuiTi-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0d0d0d;
+  font-family: 'Poppins', 'Alibaba PuHuiTi', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: #cdc1c1;
+  overflow-y: auto;
+}
+
+.homepage-container {
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #302b63);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.homepage-card {
+  background: rgba(25, 25, 25, 0.9);
+  border: 1px solid #444;
+  border-radius: 15px;
+  justify-content: flex-start;
+  box-shadow: 0 0 25px 8px rgba(168, 85, 247, 0.5);
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
+}
+
+.homepage-logo-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.homepage-logo {
+  animation: glow 2s infinite alternate, float 4s ease-in-out infinite;
+  font-size: 2.5rem;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7;
+  }
+  to {
+    text-shadow: 0 0 15px #a855f7, 0 0 25px #a855f7;
+  }
+}
+
+.homepage-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d9b3ff;
+  text-shadow: 0 0 10px #a855f7;
+}
+
+.homepage-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.homepage-section {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea, select, input[type="file"] {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #666;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f0f0f0;
+  outline: none;
+}
+
+.homepage-preview {
+  margin-top: 1rem;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #666;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homepage-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homepage-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #a855f7, 0 0 30px #6366f1;
+}
+
+.homepage-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px #a855f7;
+}
+
+select {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #f0f0f0;
+}
+
+select option {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* 拖拽上传区域 */
+.homepage-upload-area {
+  background: #111;
+  border: 2px dashed #333;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.homepage-upload-area.active {
+  background: #222;
+  border-color: #007aff;
+}
+
+.homepage-upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* 以下是本来应该分出去的BattlePage样式（后面可以单独提取） */
+/* 聊天气泡+滚动条+输入框美化 */
+.custom-scrollbar::-webkit-scrollbar,
+.custom-textarea-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb,
+.custom-textarea-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover,
+.custom-textarea-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+
+.custom-textarea-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.battle-bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  max-width: 75%;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+  transition: all 0.3s ease;
+  word-break: break-word;
+}
+
+.bubble-user {
+  background: rgba(168, 85, 247, 0.2);
+  text-align: right;
+}
+
+.bubble-ai {
+  background: rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+.battle-chat-container {
+  max-height: 40vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.battle-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.battle-textarea {
+  width: 26rem;
+  min-height: 2rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #666;
+  border-radius: 10px;
+  color: #f0f0f0;
+  resize: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.battle-remaining-rounds {
+  font-size: 0.75rem;
+  color: #a855f7;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.battle-stop-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to right, #ef4444, #f472b6);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.battle-stop-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #f472b6, 0 0 30px #ef4444;
+}

@@ -1,0 +1,95 @@
+/* ResultPage.css */
+
+.resultpage-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #302b63);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .resultpage-card {
+    width: 100%;
+    max-width: 28rem;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.5);
+    padding: 2.5rem;
+    text-align: center;
+  }
+  
+  
+  
+  .resultpage-subtitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #d1d5db;
+  }
+  
+  .resultpage-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+  }
+  
+  .resultpage-restart {
+    padding-top: 1.5rem;
+  }
+  
+  /* 通用按钮渐变效果 */
+  .button-green-gradient {
+    background: linear-gradient(to right, #22c55e, #16a34a);
+    color: white;
+    font-weight: bold;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .button-green-gradient:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #22c55e, 0 0 30px #16a34a;
+  }
+  
+  .button-red-gradient {
+    background: linear-gradient(to right, #ef4444, #ec4899);
+    color: white;
+    font-weight: bold;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .button-red-gradient:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #f472b6, 0 0 30px #c7e905;
+  }
+  
+  .button-purple-gradient {
+    background: linear-gradient(to right, #8b5cf6, #6366f1);
+    color: white;
+    font-weight: bold;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .button-purple-gradient:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #a855f7, 0 0 30px #6366f1;
+  }
+  

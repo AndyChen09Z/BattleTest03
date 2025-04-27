@@ -1,0 +1,101 @@
+/* --- BattlePage.css --- */
+
+/* 聊天气泡 */
+.battle-bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  max-width: 75%;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+  transition: all 0.3s ease;
+  word-break: break-word;
+}
+
+.bubble-user {
+  background: rgba(168, 85, 247, 0.2);
+  text-align: right;
+}
+
+.bubble-ai {
+  background: rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+/* 聊天内容列表 */
+.battle-chat-container {
+  max-height: 40vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+
+/* 输入框 */
+.battle-textarea {
+  width: 26rem;
+  min-height: 2rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #666;
+  border-radius: 10px;
+  color: #f0f0f0;
+  resize: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.custom-textarea-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-textarea-scrollbar::-webkit-scrollbar-thumb {
+  background: #a855f7;
+  border-radius: 8px;
+}
+
+.custom-textarea-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #c084fc;
+}
+
+.custom-textarea-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Round数显示 */
+.battle-remaining-rounds {
+  font-size: 0.75rem;
+  color: #a855f7;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* 停止Battle按钮 */
+.battle-stop-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to right, #ef4444, #f472b6);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.battle-stop-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #f472b6, 0 0 30px #ef4444;
+}
