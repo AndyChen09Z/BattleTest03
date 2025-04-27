@@ -25,21 +25,17 @@ export default function BattlePage() {
   const getAIResponse = async (userText) => {
     setLoading(true);
     try {
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      const response = await fetch("/api/ask-openai", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
         },
         body: JSON.stringify({
-          model: "gpt-4",
-          messages: [
-            { role: "system", content: `${stylePrompts[style] || "你是一个总是反对用户观点的AI"}` },
-            { role: "user", content: `用户说：“${userText}”。你必须反对。` },
-          ],
-          temperature: 0.85,
+          message: userText,
+          style: stylePrompts[style] || "你是一个总是反对用户观点的AI",
         }),
       });
+      
       const data = await response.json();
       return data.choices?.[0]?.message?.content || "🤖 AI 沉默了……";
     } catch {
