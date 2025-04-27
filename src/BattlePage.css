@@ -99,3 +99,28 @@
   transform: scale(1.05);
   box-shadow: 0 0 15px #f472b6, 0 0 30px #ef4444;
 }
+
+@media (max-width: 768px) {
+  .battle-bubble {
+    max-width: 90%;
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .battle-textarea {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .space-y-10 {
+    gap: 1rem;
+  }
+
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+
+  .text-xl {
+    font-size: 1.2rem;
+  }
+}

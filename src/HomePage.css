@@ -112,3 +112,38 @@ html, body {
   transform: scale(0.95);
   box-shadow: 0 0 10px #a855f7;
 }
+
+@media (max-width: 768px) {
+  .homepage-container {
+    padding: 1.5rem;
+  }
+
+  .homepage-card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .homepage-title {
+    font-size: 1.8rem;
+  }
+
+  .homepage-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .homepage-upload-area {
+    padding: 1.5rem;
+  }
+
+  textarea, select, input[type="file"] {
+    font-size: 0.9rem;
+  }
+
+  .homepage-button, .battle-stop-button {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin: 1rem auto 0 auto;
+    display: block;
+  }
+}
